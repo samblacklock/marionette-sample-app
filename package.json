@@ -9,9 +9,23 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "hapi": "^15.1.1",
+    "inert": "^4.0.2",
     "orchestra": "^1.5.1"
   },
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.0",
+    "browserify-shim": "^3.8.12",
+    "gulp": "^3.9.1",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "./node_modules/orchestra/lib/index.js": "orchestra"
   }
 }
